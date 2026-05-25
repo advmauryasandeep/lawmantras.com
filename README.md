@@ -1,16 +1,15 @@
 
-# Lawmantras Phase 2
+# Lawmantras Phase 3
 
 Includes:
-- Home page
-- Blog page
-- 25 legal posts
-- 5 categories
-- About page
-- Contact page
-- Privacy Policy
-- Terms & Conditions
-- Disclaimer
+- Dynamic blog pages
+- 25 article pages
+- Categories
+- SEO structure
+- Sitemap
+- Robots.txt
+- Footer
+- Responsive layout
 
 Deployment:
 GitHub -> Vercel

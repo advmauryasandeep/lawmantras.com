@@ -4,22 +4,28 @@ import Link from 'next/link'
 export default function Home() {
   return (
     <main>
-      <div
+      <header
         style={{
-          padding: '20px',
           background: '#111827',
           color: '#ffffff',
+          padding: '20px',
         }}
       >
         <h1>Lawmantras</h1>
 
-        <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap' }}>
+        <nav
+          style={{
+            display: 'flex',
+            gap: '20px',
+            flexWrap: 'wrap',
+          }}
+        >
           <Link href="/" style={{ color: '#ffffff' }}>Home</Link>
           <Link href="/blog" style={{ color: '#ffffff' }}>Blog</Link>
           <Link href="/about" style={{ color: '#ffffff' }}>About</Link>
           <Link href="/contact" style={{ color: '#ffffff' }}>Contact</Link>
-        </div>
-      </div>
+        </nav>
+      </header>
 
       <section
         style={{
@@ -49,17 +55,18 @@ export default function Home() {
         >
           Visit AIBE Prep Portal
         </a>
-
-        <h3 style={{ marginTop: '40px' }}>Categories</h3>
-
-        <ul style={{ lineHeight: '2' }}>
-          <li>AIBE Preparation</li>
-          <li>Bare Acts</li>
-          <li>Judiciary Preparation</li>
-          <li>Legal News Explained</li>
-          <li>Legal Career Guidance</li>
-        </ul>
       </section>
+
+      <footer
+        style={{
+          marginTop: '60px',
+          padding: '20px',
+          background: '#111827',
+          color: '#ffffff',
+        }}
+      >
+        <p>© Lawmantras</p>
+      </footer>
     </main>
   )
 }

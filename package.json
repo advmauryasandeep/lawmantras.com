@@ -1,5 +1,5 @@
 {
-  "name": "lawmantras-phase2",
+  "name": "lawmantras-phase3",
   "private": true,
   "scripts": {
     "dev": "next dev",

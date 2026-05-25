@@ -1,7 +1,7 @@
 
 export const metadata = {
   title: 'Lawmantras',
-  description: 'Legal educational platform',
+  description: 'Trusted legal educational platform',
 }
 
 export default function RootLayout({ children }) {

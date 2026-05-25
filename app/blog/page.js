@@ -1,4 +1,5 @@
 
+import Link from 'next/link'
 import { posts } from '../../data/posts'
 
 export default function BlogPage() {
@@ -20,9 +21,9 @@ export default function BlogPage() {
           marginTop: '30px',
         }}
       >
-        {posts.map((post, index) => (
+        {posts.map((post) => (
           <div
-            key={index}
+            key={post.id}
             style={{
               background: '#ffffff',
               border: '1px solid #e5e7eb',
@@ -37,6 +38,10 @@ export default function BlogPage() {
             <h3>{post.title}</h3>
 
             <p>{post.excerpt}</p>
+
+            <Link href={`/blog/${post.slug}`}>
+              Read More
+            </Link>
           </div>
         ))}
       </div>
