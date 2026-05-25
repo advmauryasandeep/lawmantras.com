@@ -1,14 +1,13 @@
-
 export default function Page() {
   return (
     <main
-      style={
+      style={{
         maxWidth: '900px',
         margin: '0 auto',
         padding: '40px 20px',
-      }
+      }}
     >
-      <h1>Contact Us</h1>
+      <h1>Contact</h1>
 
       <p>
         This page supports transparency,
