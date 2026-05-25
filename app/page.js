@@ -1,4 +1,3 @@
-
 import Link from 'next/link'
 
 const featuredArticles = [
@@ -6,78 +5,123 @@ const featuredArticles = [
     title: 'How to Pass AIBE Using Bare Acts',
     category: 'AIBE Preparation',
     link: '/blog/legal-article-1',
+    image: '/images/legal_image_01.jpg',
   },
   {
     title: 'Difference Between IPC and BNS',
     category: 'Bare Acts',
     link: '/blog/legal-article-2',
+    image: '/images/legal_image_02.jpg',
   },
   {
     title: 'Judiciary Preparation Roadmap',
     category: 'Judiciary Preparation',
     link: '/blog/legal-article-3',
+    image: '/images/legal_image_03.jpg',
   },
   {
     title: 'Litigation vs Corporate Law',
     category: 'Legal Career Guidance',
     link: '/blog/legal-article-4',
+    image: '/images/legal_image_04.jpg',
   },
   {
     title: 'Supreme Court Judgments Explained',
     category: 'Legal News Explained',
     link: '/blog/legal-article-5',
+    image: '/images/legal_image_05.jpg',
   },
   {
     title: 'Bare Act Navigation Techniques',
     category: 'AIBE Preparation',
     link: '/blog/legal-article-6',
+    image: '/images/legal_image_06.jpg',
   },
 ]
 
 const categories = [
-  'AIBE Preparation',
-  'Bare Acts',
-  'Judiciary Preparation',
-  'Legal Career Guidance',
-  'Legal News Explained',
+  {
+    title: 'AIBE Preparation',
+    description: 'Structured AIBE preparation guidance and study techniques.',
+  },
+  {
+    title: 'Bare Acts',
+    description: 'Simplified Bare Act understanding and navigation methods.',
+  },
+  {
+    title: 'Judiciary Preparation',
+    description: 'Roadmaps and preparation strategies for judiciary exams.',
+  },
+  {
+    title: 'Legal Career Guidance',
+    description: 'Career insights for litigation, corporate law and judiciary.',
+  },
+  {
+    title: 'Legal News Explained',
+    description: 'Important legal developments explained in simple language.',
+  },
 ]
 
 export default function Home() {
   return (
-    <main>
+    <main
+      style={{
+        fontFamily: 'Arial, sans-serif',
+        background: '#f5f7fb',
+        color: '#07152f',
+      }}
+    >
       <header
         style={{
           background: '#07152f',
           color: '#ffffff',
-          padding: '25px',
+          padding: '30px 20px',
         }}
       >
-        <h1 style={{ fontSize: '54px', marginBottom: '20px' }}>
-          Lawmantras
-        </h1>
-
-        <nav
+        <div
           style={{
-            display: 'flex',
-            gap: '24px',
-            flexWrap: 'wrap',
+            maxWidth: '1200px',
+            margin: '0 auto',
           }}
         >
-          <Link href="/" style={{ color: '#ffffff' }}>Home</Link>
-          <Link href="/blog" style={{ color: '#ffffff' }}>Blog</Link>
-          <Link href="/about" style={{ color: '#ffffff' }}>About</Link>
-          <Link href="/contact" style={{ color: '#ffffff' }}>Contact</Link>
-        </nav>
+          <h1
+            style={{
+              fontSize: '52px',
+              marginBottom: '18px',
+            }}
+          >
+            Lawmantras
+          </h1>
+
+          <nav
+            style={{
+              display: 'flex',
+              gap: '24px',
+              flexWrap: 'wrap',
+            }}
+          >
+            <Link href="/" style={{ color: '#ffffff' }}>Home</Link>
+            <Link href="/blog" style={{ color: '#ffffff' }}>Blog</Link>
+            <Link href="/about" style={{ color: '#ffffff' }}>About</Link>
+            <Link href="/contact" style={{ color: '#ffffff' }}>Contact</Link>
+          </nav>
+        </div>
       </header>
 
       <section
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '70px 20px',
+          padding: '80px 20px',
         }}
       >
-        <h2 style={{ fontSize: '48px', marginBottom: '20px' }}>
+        <h2
+          style={{
+            fontSize: '48px',
+            marginBottom: '20px',
+            lineHeight: '1.3',
+          }}
+        >
           Trusted Legal Educational Platform
         </h2>
 
@@ -88,22 +132,23 @@ export default function Home() {
             maxWidth: '900px',
           }}
         >
-          Lawmantras focuses on AIBE preparation, Bare Acts,
-          judiciary preparation, legal awareness and legal career guidance
-          through simplified educational resources and structured guidance.
+          Lawmantras provides simplified legal educational resources focused
+          on AIBE preparation, Bare Acts, judiciary preparation,
+          legal awareness and legal career guidance.
         </p>
 
-        <div style={{ marginTop: '35px' }}>
+        <div style={{ marginTop: '40px' }}>
           <a
             href="https://aibeprep.lawmantras.com"
             style={{
               display: 'inline-block',
-              padding: '16px 24px',
+              padding: '18px 28px',
               background: '#07152f',
               color: '#ffffff',
               textDecoration: 'none',
               borderRadius: '10px',
               fontWeight: 'bold',
+              fontSize: '18px',
             }}
           >
             Visit AIBE Prep Portal
@@ -113,8 +158,8 @@ export default function Home() {
 
       <section
         style={{
-          background: '#f3f4f6',
-          padding: '60px 20px',
+          background: '#eef2f7',
+          padding: '70px 20px',
         }}
       >
         <div
@@ -123,7 +168,12 @@ export default function Home() {
             margin: '0 auto',
           }}
         >
-          <h2 style={{ marginBottom: '30px' }}>
+          <h2
+            style={{
+              marginBottom: '35px',
+              fontSize: '38px',
+            }}
+          >
             Featured Categories
           </h2>
 
@@ -131,23 +181,36 @@ export default function Home() {
             style={{
               display: 'grid',
               gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-              gap: '20px',
+              gap: '24px',
             }}
           >
             {categories.map((category) => (
               <div
-                key={category}
+                key={category.title}
                 style={{
                   background: '#ffffff',
-                  padding: '25px',
-                  borderRadius: '14px',
-                  border: '1px solid #e5e7eb',
+                  padding: '28px',
+                  borderRadius: '16px',
+                  border: '1px solid #dbe4ef',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.04)',
                 }}
               >
-                <h3>{category}</h3>
+                <h3
+                  style={{
+                    marginBottom: '14px',
+                    lineHeight: '1.4',
+                  }}
+                >
+                  {category.title}
+                </h3>
 
-                <p style={{ lineHeight: '1.7' }}>
-                  Educational legal content and structured guidance.
+                <p
+                  style={{
+                    lineHeight: '1.8',
+                    color: '#374151',
+                  }}
+                >
+                  {category.description}
                 </p>
               </div>
             ))}
@@ -159,53 +222,77 @@ export default function Home() {
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
-          padding: '70px 20px',
+          padding: '80px 20px',
         }}
       >
-        <h2 style={{ marginBottom: '30px' }}>
+        <h2
+          style={{
+            marginBottom: '35px',
+            fontSize: '38px',
+          }}
+        >
           Latest Articles
         </h2>
 
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '24px',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+            gap: '28px',
           }}
         >
           {featuredArticles.map((article) => (
             <div
               key={article.title}
               style={{
-                border: '1px solid #e5e7eb',
-                borderRadius: '14px',
-                background: '#ffffff',
+                borderRadius: '18px',
                 overflow: 'hidden',
+                background: '#ffffff',
+                border: '1px solid #dbe4ef',
+                boxShadow: '0 6px 16px rgba(0,0,0,0.05)',
               }}
             >
-              <div
+              <img
+                src={article.image}
+                alt={article.title}
                 style={{
-                  height: '180px',
-                  background: '#dbeafe',
+                  width: '100%',
+                  height: '220px',
+                  objectFit: 'cover',
+                  display: 'block',
                 }}
               />
 
-              <div style={{ padding: '20px' }}>
+              <div style={{ padding: '24px' }}>
                 <p
                   style={{
                     color: '#2563eb',
                     fontSize: '14px',
+                    marginBottom: '12px',
+                    fontWeight: 'bold',
                   }}
                 >
                   {article.category}
                 </p>
 
-                <h3 style={{ lineHeight: '1.5' }}>
+                <h3
+                  style={{
+                    lineHeight: '1.5',
+                    marginBottom: '20px',
+                  }}
+                >
                   {article.title}
                 </h3>
 
-                <Link href={article.link}>
-                  Read More
+                <Link
+                  href={article.link}
+                  style={{
+                    color: '#07152f',
+                    fontWeight: 'bold',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Read More →
                 </Link>
               </div>
             </div>
@@ -215,8 +302,8 @@ export default function Home() {
 
       <section
         style={{
-          background: '#f9fafb',
-          padding: '70px 20px',
+          background: '#eef2f7',
+          padding: '80px 20px',
         }}
       >
         <div
@@ -225,12 +312,20 @@ export default function Home() {
             margin: '0 auto',
           }}
         >
-          <h2>Why Trust Lawmantras?</h2>
+          <h2
+            style={{
+              fontSize: '38px',
+              marginBottom: '24px',
+            }}
+          >
+            Why Trust Lawmantras?
+          </h2>
 
           <ul
             style={{
               lineHeight: '2',
-              fontSize: '18px',
+              fontSize: '20px',
+              color: '#374151',
             }}
           >
             <li>Simplified legal education resources</li>
@@ -238,6 +333,7 @@ export default function Home() {
             <li>Bare Act learning techniques</li>
             <li>Judiciary preparation support</li>
             <li>Student-friendly explanations</li>
+            <li>Structured educational articles and updates</li>
           </ul>
         </div>
       </section>
@@ -246,21 +342,29 @@ export default function Home() {
         style={{
           maxWidth: '1000px',
           margin: '0 auto',
-          padding: '70px 20px',
+          padding: '80px 20px',
         }}
       >
-        <h2>About Lawmantras</h2>
+        <h2
+          style={{
+            fontSize: '38px',
+            marginBottom: '24px',
+          }}
+        >
+          About Lawmantras
+        </h2>
 
         <p
           style={{
             lineHeight: '2',
-            fontSize: '18px',
+            fontSize: '19px',
+            color: '#374151',
           }}
         >
-          Lawmantras is an educational legal platform focused on helping
-          law students, AIBE aspirants and judiciary candidates through
-          simplified legal guidance, structured educational content and
-          legal awareness initiatives.
+          Lawmantras is an educational legal platform helping law students,
+          AIBE aspirants and judiciary candidates through simplified legal
+          guidance, structured educational resources and legal awareness
+          initiatives designed for practical learning.
         </p>
       </section>
 
@@ -268,7 +372,7 @@ export default function Home() {
         style={{
           background: '#07152f',
           color: '#ffffff',
-          padding: '40px 20px',
+          padding: '50px 20px',
         }}
       >
         <div
@@ -280,9 +384,9 @@ export default function Home() {
           <div
             style={{
               display: 'flex',
-              gap: '20px',
+              gap: '22px',
               flexWrap: 'wrap',
-              marginBottom: '20px',
+              marginBottom: '22px',
             }}
           >
             <Link href="/about" style={{ color: '#ffffff' }}>About</Link>
@@ -293,7 +397,13 @@ export default function Home() {
             <Link href="/blog" style={{ color: '#ffffff' }}>Blog</Link>
           </div>
 
-          <p>© Lawmantras</p>
+          <p
+            style={{
+              color: '#d1d5db',
+            }}
+          >
+            © Lawmantras — Educational Legal Platform
+          </p>
         </div>
       </footer>
     </main>
